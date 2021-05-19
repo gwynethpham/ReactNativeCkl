@@ -58,12 +58,12 @@ workflows:
       - build:
           filters :
             branches :
-              # ignore : 
-              #   - develop
-              #   - /feature-.*/
-              #   - /fixbug-.*/
-              only : 
+              ignore : 
                 - develop
+                - /feature-.*/
+                - /fixbug-.*/
+              # only : 
+              #   - develop
       - deploy-stage:
           requires :
             - build
