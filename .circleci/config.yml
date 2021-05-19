@@ -7,14 +7,13 @@ orbs:
   # Orbs reduce the amount of configuration required for common tasks. 
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/node
   node: circleci/node@4.1
-
 jobs:
-  build:  
+    build:
+      branches:
+        only:
+          - circleci-project-setup
     docker:
       - image: gitlab/gitlab-ce
-    branches:
-      only:
-        - circleci-project-setup
     steps : 
       - run :
           name: build site and push to github-pages
