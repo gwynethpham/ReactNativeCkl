@@ -5,11 +5,6 @@ echo "install success!"
 
 git pull orgin
 
-git checkout -b develop
-
-yarn
-echo "Checkout develop"
-
-git merge origin circleci-project-setup
+git merge origin master
 
 echo "MERGE SUCCESS!!"
