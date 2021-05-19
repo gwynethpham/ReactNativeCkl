@@ -14,4 +14,6 @@ git checkout master
 
 git merge origin/develop
 
-git push --set-upstream origin master
+git push origin
+
+# git push --set-upstream origin master
