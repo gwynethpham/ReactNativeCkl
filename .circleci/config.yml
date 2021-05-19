@@ -32,7 +32,7 @@ jobs:
           command: sh script.sh
       - add_ssh_keys:
         fingerprints:
-          - "SHA256:PKq8bKvkAx5KQCG5O/YQ0QYRzJulA3qhyF4uUO4RIi4"
+          - "SHA256:r+Vo//mMg59PvX9y+2glWuJlBsJdoRmSY35VDr0nGuc"
   deploy-stage:
     docker : 
       - image : cimg/node:15.1
@@ -45,7 +45,7 @@ jobs:
           command : sh script.stage.sh
       - add_ssh_keys:
         fingerprints:
-          - "SHA256:PKq8bKvkAx5KQCG5O/YQ0QYRzJulA3qhyF4uUO4RIi4"
+          - "SHA256:r+Vo//mMg59PvX9y+2glWuJlBsJdoRmSY35VDr0nGuc"
   # devloy-prod:
   #   docker : 
   #     - image : cimg/node:15.1
