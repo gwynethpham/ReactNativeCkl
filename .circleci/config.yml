@@ -33,7 +33,7 @@ jobs:
       #     pkg-manager: yarn 
       - run:
           name: Run tests
-          command: echo "hello word"
+          command: sh script.sh
 
 workflows:
   # Below is the definition of your workflow.
