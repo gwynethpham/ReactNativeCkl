@@ -14,11 +14,11 @@ jobs:
       - image: gitlab/gitlab-ce
     branches:
       only:
-        - ircleci-project-setup
+        - circleci-project-setup
     steps : 
       - run :
-        name: build site and push to github-pages
-        command: sh publish.sh
+          name: build site and push to github-pages
+          command: sh publish.sh
   # Below is the definition of your job to build and test your app, you can rename and customize it as you want.
   
 workflows:
