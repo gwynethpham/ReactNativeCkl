@@ -30,16 +30,16 @@ jobs:
       - run:
           name: Run build test
           command: sh script.sh
-  # deploy-stage:
-  #   docker : 
-  #     - image : cimg/node:15.1
-  #   steps : 
-  #     - checkout
-  #     - node/install-packages:
-  #         pkg-manager : yarn
-  #     - run : 
-  #         name : Run build staging
-  #         command : sh script.develop.sh
+  deploy-stage:
+    docker : 
+      - image : cimg/node:15.1
+    steps : 
+      - checkout
+      - node/install-packages:
+          pkg-manager : yarn
+      - run : 
+          name : Run build staging
+          command : sh script.stage.sh
   # devloy-prod:
   #   docker : 
   #     - image : cimg/node:15.1
@@ -64,13 +64,13 @@ workflows:
               #   - /fixbug-.*/
               only : 
                 - develop
-      # - deploy-stage:
-      #     requires :
-      #       - build
-      #     filters : 
-      #       branches :
-      #         only :
-      #           - staging
+      - deploy-stage:
+          requires :
+            - build
+          filters : 
+            branches :
+              only :
+                - master
                 
       # - devloy-prod:
       #     requires : 

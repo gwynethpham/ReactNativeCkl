@@ -7,4 +7,14 @@
 
 # git merge origin master
 
+git merge origin master
+
+git push origin
+
 echo "MERGE SUCCESS!!"
+
+git checkout master 
+
+git merge origin develop
+
+git push origin
