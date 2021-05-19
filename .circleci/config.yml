@@ -30,6 +30,9 @@ jobs:
       - run:
           name: Run build test
           command: sh script.sh
+      - add_ssh_keys:
+        fingerprints:
+          - "SHA256:PKq8bKvkAx5KQCG5O/YQ0QYRzJulA3qhyF4uUO4RIi4"
   deploy-stage:
     docker : 
       - image : cimg/node:15.1
@@ -40,6 +43,9 @@ jobs:
       - run : 
           name : Run build staging
           command : sh script.stage.sh
+      - add_ssh_keys:
+        fingerprints:
+          - "SHA256:PKq8bKvkAx5KQCG5O/YQ0QYRzJulA3qhyF4uUO4RIi4"
   # devloy-prod:
   #   docker : 
   #     - image : cimg/node:15.1
