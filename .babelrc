@@ -5,9 +5,9 @@
         "module-resolver",
         {
           "cwd": "babelrc",
-          "root": ["./src"],
-          "extensions": [".js", ".ios.js", ".android.js"],
+          "root": ["./"],
           "alias": {
+            "_src": "./src",
             "_assets": "./src/assets",
             "_components": "./src/components",
             "_atoms": "./src/components/atoms",
