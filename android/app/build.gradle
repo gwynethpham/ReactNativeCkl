@@ -151,6 +151,7 @@ android {
         versionCode Integer.valueOf(env.get("ANDROID_APP_VERSION_CODE"))
         versionName env.get("ANDROID_APP_VERSION_NAME")
         resValue "string", "build_config_package", "com.reactnativecklexample"
+        missingDimensionStrategy 'react-native-camera', 'general'
     }
     splits {
         abi {
